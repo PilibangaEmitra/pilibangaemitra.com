@@ -3,97 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPBPLB Online Hub - पीलीबंगा</title>
+    <title>Pilibanga e-Mitra | Sarkari Result Style</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; flex-direction: column; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+        body { background-color: #f1f8ff; color: #000; }
         
-        header { background-color: rgba(0,0,0,0.7); color: white; padding: 30px 20px; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.1rem; color: #ccc; }
+        /* Top Banner */
+        .top-banner { background-color: #002e5b; color: white; text-align: center; padding: 15px 10px; border-bottom: 4px solid #ff6f00; }
+        .top-banner h1 { font-size: 26px; font-weight: bold; text-transform: uppercase; }
+        .top-banner p { font-size: 13px; color: #ffca28; margin-top: 4px; font-weight: bold; }
         
-        nav { background-color: rgba(0,0,0,0.9); padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { color: #FFD700; }
+        /* Marquee Alert */
+        .alert-bar { background-color: #fff3cd; color: #856404; padding: 8px; font-size: 13px; font-weight: bold; border-bottom: 1px solid #ffeeba; }
         
-        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; flex: 1; }
+        .main-container { max-width: 1000px; margin: 15px auto; padding: 0 10px; }
         
-        .card { background: white; border-radius: 10px; padding: 30px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.8rem; }
-        .card p { color: #555; line-height: 1.8; font-size: 1rem; }
+        /* Quick Links Row */
+        .quick-links-box { background-color: #ff6f00; color: white; padding: 10px; font-weight: bold; font-size: 15px; text-align: center; margin-bottom: 15px; border-radius: 4px; }
+        .quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 20px; }
+        .quick-card { background-color: #fff; border: 1px solid #ccc; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-decoration: none; color: #0056b3; border-radius: 4px; }
+        .quick-card:active { background-color: #e6f2ff; }
+
+        /* Main Sarkari Result 3-Column Grid */
+        .sarkari-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
         
-        .btn { display: inline-block; background: #667eea; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; margin-top: 10px; font-weight: bold; }
-        .btn:hover { background: #764ba2; }
+        .column-box { background-color: #fff; border: 2px solid #0056b3; border-radius: 4px; min-height: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .column-header { background-color: #0056b3; color: white; text-align: center; padding: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; }
+        .column-header.admit { background-color: #28a745; }
+        .column-header.result { background-color: #dc3545; }
         
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #667eea; box-shadow: 0 0 5px #667eea; }
+        .column-box.admit-box { border-color: #28a745; }
+        .column-box.result-box { border-color: #dc3545; }
         
-        footer { background-color: rgba(0,0,0,0.8); color: white; text-align: center; padding: 20px; margin-top: 30px; }
+        .link-list { list-style: none; padding: 10px; }
+        .link-item { border-bottom: 1px dashed #ccc; padding: 8px 0; font-size: 13px; }
+        .link-item a { text-decoration: none; color: #0056b3; font-weight: bold; }
+        .link-item a:active { color: #ff6f00; }
+        .link-item .new-tag { color: red; font-weight: bold; font-size: 11px; margin-left: 5px; animation: blink 1s infinite; }
+        
+        @keyframes blink { 0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;} }
+        
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; margin-top: 30px; border-top: 1px solid #ccc; background-color: #fff; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🎉 KPBPLB Online Hub</h1>
-        <p>आपकी सभी सरकारी सेवाएं एक जगह पर</p>
-    </header>
-    
-    <nav>
-        <a href="#home">होम</a>
-        <a href="#services">सेवाएं</a>
-        <a href="#form">ऑनलाइन फॉर्म</a>
-        <a href="#contact">संपर्क</a>
-    </nav>
-    
-    <div class="container">
-        <div class="card">
-            <h2>📋 ऑनलाइन फॉर्म सेवा</h2>
-            <p>आप घर बैठे ही सभी सरकारी फॉर्म को भरवा सकते हैं। हमारे विशेषज्ञ टीम आपकी हर मदद के लिए तैयार है।</p>
-            
-            <form>
-                <div class="form-group">
-                    <label>आपका नाम:</label>
-                    <input type="text" placeholder="अपना पूरा नाम लिखें" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>मोबाइल नंबर:</label>
-                    <input type="tel" placeholder="आपका व्हाट्सऐप नंबर" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>कौनसी सेवा चाहिए?</label>
-                    <select required>
-                        <option value="">-- चुनें --</option>
-                        <option value="sarkari">सरकारी नौकरी फॉर्म</option>
-                        <option value="admit">एडमिट कार्ड</option>
-                        <option value="niwas">मूल निवास प्रमाण पत्र</option>
-                        <option value="jati">जाति प्रमाण पत्र</option>
-                        <option value="income">आय प्रमाण पत्र</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>अतिरिक्त जानकारी:</label>
-                    <textarea rows="4" placeholder="कोई और विवरण दें"></textarea>
-                </div>
-                
-                <button type="submit" class="btn">✅ सबमिट करें</button>
-            </form>
-        </div>
-        
-        <div class="card">
-            <h2>📞 हमसे संपर्क करें</h2>
-            <p><strong>फोन:</strong> 9876543210</p>
-            <p><strong>ईमेल:</strong> info@pilibanga.com</p>
-            <p><strong>पता:</strong> पीलीबंगा, राजस्थान</p>
-            <a href="https://wa.me/919876543210" class="btn">📱 व्हाट्सऐप पर चैट करें</a>
-        </div>
+
+    <!-- Header -->
+    <div class="top-banner">
+        <h1>PILIBANGA SARKARI RESULT</h1>
+        <p>पीलीबंगा ई-मित्र & ऑनलाइन फॉर्म डिजिटल हेल्प पोर्टल</p>
     </div>
-    
-    <footer>
-        <p>&copy; 2026 KPBPLB Online Hub. सभी अधिकार सुरक्षित हैं।</p>
-    </footer>
+
+    <!-- Live Moving Alert -->
+    <div class="alert-bar">
+        <marquee scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+            🔥 लेटेस्ट अपडेट: आरपीएससी फर्स्ट ग्रेड टीचर जॉइनिंग आर्डर और शाला दर्पण स्कूल अलॉटमेंट लेटर लिंक नीचे एक्टिव कर दिए गए हैं।
+        </marquee>
+    </div>
+
+    <div class="main-container">
+        
+        <!-- Top Sticky Buttons -->
+        <div class="quick-links-box">⭐ IMPORTANT LINKS CORNER ⭐</div>
+        <div class="quick-grid">
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SSO LOGIN (फॉर्म भरें)</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">JAN SOOCHNA STATUS</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SHALA DARPAN LOGIN</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">1st GRADE JOINING LETTER</a>
+        </div>
+
+        <!-- The 3 Column Sarkari Result Block -->
+        <div class="sarkari-grid">
+            
+            <!-- COLUMN 1: LATEST JOBS -->
+            <div class="column-box">
+                <div class="column-header">Latest Jobs</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan New Vacancy Online Form 2026</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC Various Post Apply Online</a></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan CET Form Link</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 2: ADMIT CARD -->
+            <div class="column-box admit-box">
+                <div class="column-header admit">Admit Card</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan Exam Admit Card 2026</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC School Lecturer Admit Card</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: RESULTS -->
+            <div class="column-box result-box">
+                <div class="column-header result">Result</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC 1st Grade Final Posting Order List</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Teacher Counselling Allotment Result</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Pilibanga e-Mitra Sarkari Result Hub. All Rights Reserved.
+    </div>
+
 </body>
 </html>
