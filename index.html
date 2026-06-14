@@ -14,7 +14,8 @@
         .main-container { max-width: 1100px; margin: 15px auto; padding: 0 10px; }
         .quick-links-box { background-color: #ff6f00; color: white; padding: 10px; font-weight: bold; font-size: 15px; text-align: center; margin-bottom: 15px; border-radius: 4px; }
         .quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 20px; }
-        .quick-card { background-color: #fff; border: 1px solid #ccc; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-decoration: none; color: #0056b3; border-radius: 4px; }
+        .quick-card { background-color: #fff; border: 1px solid #ccc; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-decoration: none; color: #0056b3; border-radius: 4px; transition: 0.3s; }
+        .quick-card:hover { background-color: #f0f0f0; }
         
         .sarkari-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
         .column-box { background-color: #fff; border: 2px solid #0056b3; border-radius: 4px; min-height: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
@@ -28,6 +29,7 @@
         .link-list { list-style: none; padding: 10px; }
         .link-item { border-bottom: 1px dashed #ccc; padding: 8px 0; font-size: 13px; }
         .link-item a { text-decoration: none; color: #0056b3; font-weight: bold; }
+        .link-item a:hover { text-decoration: underline; }
         .link-item .new-tag { color: red; font-weight: bold; font-size: 11px; margin-left: 5px; animation: blink 1s infinite; }
         
         /* PREMIUM DESIGNED TAGS FOR LATEST JOBS */
@@ -43,15 +45,16 @@
         .action-box { background-color: #fff; border: 2px solid #ff6f00; border-radius: 6px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .action-box.services { border-color: #002e5b; }
         .action-box.upcoming { border-color: #e65100; }
-        .action-box.allindia { border-color: #198754; } /* New green border for All India */
+        .action-box.allindia { border-color: #198754; }
         
         .action-title { font-size: 15px; font-weight: bold; color: #fff; background-color: #ff6f00; padding: 8px; text-align: center; border-radius: 4px; margin-bottom: 12px; text-transform: uppercase; }
         .action-box.services .action-title { background-color: #002e5b; }
         .action-box.upcoming .action-title { background-color: #e65100; }
-        .action-box.allindia .action-title { background-color: #198754; } /* New green header for All India */
+        .action-box.allindia .action-title { background-color: #198754; }
         
-        .pdf-btn { display: flex; align-items: center; justify-content: center; background-color: #dc3545; color: white; text-decoration: none; padding: 14px; font-weight: bold; border-radius: 4px; font-size: 14px; border-bottom: 4px solid #b21f2d; text-align: center; margin-top: 5px; }
-        .pdf-btn:active { transform: translateY(2px); border-bottom-width: 2px; }
+        .pdf-btn { display: flex; align-items: center; justify-content: center; background-color: #dc3545; color: white; text-decoration: none; padding: 14px; font-weight: bold; border-radius: 4px; transition: 0.3s; }
+        .pdf-btn:hover { background-color: #c82333; }
+        .pdf-btn:active { transform: translateY(2px); }
         
         .services-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 5px; }
         .service-item { background: #f8f9fa; border: 1px solid #ddd; padding: 8px; font-size: 13px; font-weight: bold; border-radius: 3px; color: #333; text-align: center; }
@@ -59,7 +62,8 @@
         @keyframes blink { 0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;} }
         .business-footer { background-color: #fff; border-top: 2px solid #002e5b; margin-top: 30px; padding: 20px 15px; text-align: center; font-size: 14px; line-height: 1.6; color: #333; }
         .footer-title { color: #002e5b; font-weight: bold; font-size: 16px; margin-bottom: 10px; text-transform: uppercase; }
-        .whatsapp-btn { background-color: #25d366; color: white !important; text-decoration: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; display: inline-block; margin: 15px 0; font-size: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .whatsapp-btn { background-color: #25d366; color: white !important; text-decoration: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; display: inline-block; margin: 15px 0; transition: 0.3s; }
+        .whatsapp-btn:hover { background-color: #1ebd56; }
         .copyright { font-size: 11px; color: #777; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
     </style>
 </head>
@@ -69,7 +73,7 @@
         <p>पीलीबंगा ई-मित्र & ऑनलाइन फॉर्म डिजिटल हेल्प पोर्टल</p>
     </div>
     <div class="alert-bar">
-        <marquee scrollamount="4">🔥 <strong>घर बैठे फॉर्म भराने के लिए अभी व्हाट्सएप करें - 8955502010</strong> | लेटेस्ट अपडेट: कॉलेज एडमिशन और बीएसटीसी काउंसलिंग पेज चालू हैं।</marquee>
+        <marquee scrollamount="4">🔥 <strong>घर बैठे फॉर्म भराने के लिए अभी व्हाट्सएप करें - 8955502010</strong> | लेटेस्ट जॉब्स अपडेट के लिए हमें फॉलो करें</marquee>
     </div>
     <div class="main-container">
         <div class="quick-links-box">⭐ IMPORTANT LINKS CORNER ⭐</div>
@@ -103,7 +107,7 @@
                 </ul>
             </div>
             
-            <!-- 2. ADMIT CARD (ओनली एडमिट कार्ड) -->
+            <!-- 2. ADMIT CARD -->
             <div class="column-box admit-box">
                 <div class="column-header admit">Admit Card</div>
                 <ul class="link-list">
@@ -132,4 +136,51 @@
             </div>
         </div>
 
+        <div class="action-container" style="margin-top: 30px;">
+            <div class="action-box services">
+                <div class="action-title">📋 हमारी सेवाएं</div>
+                <ul class="services-list">
+                    <li class="service-item">ऑनलाइन फॉर्म भरना</li>
+                    <li class="service-item">एडमिट कार्ड डाउनलोड</li>
+                    <li class="service-item">रिजल्ट चेक</li>
+                    <li class="service-item">प्रमाण पत्र</li>
+                </ul>
+            </div>
 
+            <div class="action-box upcoming">
+                <div class="action-title">📅 आने वाली परीक्षाएं</div>
+                <ul class="services-list">
+                    <li class="service-item">RPSC Exam</li>
+                    <li class="service-item">SSC CGL</li>
+                    <li class="service-item">BSTC 2026</li>
+                    <li class="service-item">PSSSB Jobs</li>
+                </ul>
+            </div>
+
+            <div class="action-box allindia">
+                <div class="action-title">🇮🇳 अखिल भारतीय</div>
+                <ul class="services-list">
+                    <li class="service-item">UPSC Exams</li>
+                    <li class="service-item">SSC Exams</li>
+                    <li class="service-item">Banking Jobs</li>
+                    <li class="service-item">Railway Jobs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="business-footer">
+        <div class="footer-title">📞 हमसे संपर्क करें</div>
+        <p><strong>मुख्य संचालक:</strong> भगीरथ बिर्ट (Bhagirath Birt)</p>
+        <p><strong>मोबाइल नंबर:</strong> 8955502010 | 8955502020</p>
+        <p><strong>दुकान का पता:</strong> करणी चौधरी पुस्तक भंडार, पीलीबंगा (राजस्थान)</p>
+        <p><strong>ई-मेल:</strong> pilibangaemitra@example.com</p>
+        <a href="https://wa.me/918955502010" class="whatsapp-btn" target="_blank">💬 WhatsApp पर संपर्क करें</a>
+        <div class="copyright">
+            <p>&copy; 2026 KPBPLB Online Hub. सभी अधिकार सुरक्षित हैं।</p>
+            <p>यह वेबसाइट पीलीबंगा क्षेत्र में डिजिटल सेवा प्रदान करती है।</p>
+        </div>
+    </div>
+
+</body>
+</html>
