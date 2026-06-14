@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPBPLB ONLINE HUB - पीलीबंगा</title>
+    <!-- FontAwesome Premium Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --card-bg: #131c2e;
+            --accent-glow: #00ffcc;
+            --text-light: #f8fafc;
+            --primary-gradient: linear-gradient(135deg, #00f2fe, #4facfe);
+            --wa-gradient: linear-gradient(135deg, #11998e, #38ef7d);
+            --bill-gradient: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); padding-bottom: 50px; }
+
+        /* टॉप ग्लोइंग इमरजेंसी पट्टी */
+        .top-ticker {
+            background: linear-gradient(90deg, #ff0055, #990033);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent-glow);
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+        }
+        .top-ticker a { color: #fff; text-decoration: none; }
+        .top-ticker i { color: #fffb00; margin-right: 8px; }
+
+        /* हेडर डिज़ाइन */
+        header {
+            background: radial-gradient(circle at top, #1e2942, #090d16);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ff9100;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #ffffff, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        }
+        header p { color: #94a3b8; font-size: 1.3rem; margin-top: 10px; font-weight: 500; }
+
+        /* नेविगेशन बार */
+        nav { background-color: #050811; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 10px; }
+        nav a {
+            color: #cbd5e1;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #fff;
+            background: rgba(0, 255, 204, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+        }
+
+        /* 👑 न्यू मास्टर लेआउट - 2 कॉलम (लेफ्ट में जानकारी, राइट में सभी फॉर्म्स) */
+        .main-wrapper { max-width: 1300px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2.2fr 1fr; gap: 25px; }
+        @media (max-width: 1000px) { .main-wrapper { grid-template-columns: 1fr; } }
+
+        /* लेफ्ट साइड की मुख्य सामग्री */
+        .content-area { display: flex; flex-direction: column; gap: 25px; }
+
+        /* राइट साइड का साइडबार (सभी फॉर्म्स और प्रोफाइल्स) */
+        .sidebar-area { display: flex; flex-direction: column; gap: 25px; }
+
+        .main-title {
+            background: linear-gradient(90deg, #131c2e, #1e2942);
+            color: #fff;
+            padding: 15px 25px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            border-left: 6px solid var(--accent-glow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* लेटेस्ट फॉर्म ग्रिड */
+        .filter-section { background: var(--card-bg); border-radius: 8px; border: 1px solid #22314d; overflow: hidden; }
+        .filter-body { padding: 20px; }
+        .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+        .filter-btn { background: #1a263d; color: #fff; padding: 12px; text-align: center; text-decoration: none; font-weight: bold; border-radius: 6px; border: 1px solid #2d3f61; transition: 0.2s; font-size: 0.9rem; }
+        .filter-btn:hover { background: var(--accent-glow); color: #090d16; transform: translateY(-2px); }
+
+        /* जॉब मैट्रिक्स डिज़ाइन (2 कॉलम में अगल-बगल अंदर फिट) */
+        .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .box { background: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid #22314d; }
+        .box-title { color: white; padding: 12px; font-size: 1.2rem; font-weight: bold; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.1); }
+        
+        .bg-red { background: linear-gradient(135deg, #ef4444, #991b1b); }
+        .bg-green { background: linear-gradient(135deg, #10b981, #065f46); }
+        .bg-orange { background: linear-gradient(135deg, #f59e0b, #92400e); }
+
+        .link-list { list-style: none; }
+        .link-list li { border-bottom: 1px solid #1e2942; padding: 12px 15px; }
+        .link-list li a { color: #e2e8f0; text-decoration: none; font-weight: 600; display: block; font-size: 0.9rem; }
+        .link-list li a:hover { color: var(--accent-glow); }
+
+        .blink-tag { background: linear-gradient(to right, #ef4444, #ff3d00); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: bold; animation: blink 0.8s infinite; float: right; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* डाउनलोड सेंटर */
+        .download-box { background: var(--card-bg); border-radius: 0 0 8px 8px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; border: 1px solid #22314d; border-top: none; }
+        .dl-card { background: #1a263d; padding: 12px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #2d3f61; }
+        .dl-card span { font-weight: bold; color: #f1f5f9; font-size: 0.85rem; }
+        .dl-card i { color: #ff4444; margin-right: 6px; font-size: 1.1rem; }
+        .btn-dl { background: var(--primary-gradient); color: #fff; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+
+        /* समस्त सेवाएं कार्ड */
+        .services-card { background: white; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); overflow: hidden; color: #1e293b; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px; }
+        .service-column h4 { margin-bottom: 10px; font-size: 1.1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px; font-weight: 700; color: #0f172a; }
+        .service-column ul { list-style: none; line-height: 2.2; color: #475569; font-size: 0.9rem; }
+        .service-column ul li i { color: #ff9100; margin-right: 6px; }
+
+        /* साइडबार फॉर्म्स एवं कार्ड्स डिज़ाइन */
+        .form-card { background: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid #22314d; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .form-headline { color: white; padding: 12px 20px; font-size: 1.25rem; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+        .bg-wa-form { background: var(--wa-gradient); }
+        .bg-bill-form { background: var(--bill-gradient); }
+        
+        .form-body { padding: 18px; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #cbd5e1; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #2d3f61; border-radius: 6px; font-size: 0.95rem; background-color: #0f172a; color: #fff; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent-glow); outline: none; }
+        
+        .submit-btn { color: white; border: none; padding: 12px; width: 100%; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+        .btn-wa-style { background: var(--wa-gradient); }
+        .btn-bill-style { background: var(--bill-gradient); }
+
+        .owner-box { background: var(--card-bg); border-radius: 8px; border: 1px solid #22314d; overflow: hidden; text-align: center; }
+        .owner-headline { background: linear-gradient(90deg, #1e2942, #131c2e); color: white; padding: 12px; font-size: 1.15rem; font-weight: bold; }
+        .owner-profile { padding: 20px; }
+        .owner-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid #2d3f61; margin-bottom: 10px; }
+        .owner-name { font-size: 1.3rem; font-weight: bold; color: var(--accent-glow); }
+        .owner-title { font-size: 0.8rem; color: #94a3b8; font-weight: bold; margin-bottom: 10px; }
+        .btn-call { display: inline-flex; align-items: center; gap: 6px; background: var(--primary-gradient); color: white; padding: 8px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
+
+        .qr-box { background: var(--card-bg); border-radius: 8px; border: 1px solid #22314d; overflow: hidden; text-align: center; }
+        .qr-headline { background: linear-gradient(90deg, #d97706, #b45309); color: white; padding: 12px; font-size: 1.15rem; font-weight: bold; }
+        .qr-body { padding: 20px; }
+        .qr-box img { background: white; padding: 8px; border-radius: 8px; width: 130px; height: 130px; }
+        .qr-text { font-size: 0.8rem; color: #94a3b8; margin-top: 10px; font-weight: 600; line-height: 1.4; }
+
+        footer { background-color: #050811; color: #64748b; text-align: center; padding: 25px; margin-top: 50px; border-top: 3px solid var(--accent-glow); }
