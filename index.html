@@ -7,90 +7,147 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
         body { background-color: #f1f8ff; color: #000; }
+        
+        /* Top Banner */
         .top-banner { background-color: #002e5b; color: white; text-align: center; padding: 20px 10px; border-bottom: 4px solid #ff6f00; }
         .top-banner h1 { font-size: 28px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
         .top-banner p { font-size: 14px; color: #ffca28; margin-top: 6px; font-weight: bold; }
+        
+        /* Marquee Alert */
         .alert-bar { background-color: #fff3cd; color: #856404; padding: 8px; font-size: 14px; font-weight: bold; border-bottom: 1px solid #ffeeba; }
+        
         .main-container { max-width: 1100px; margin: 15px auto; padding: 0 10px; }
+        
+        /* Quick Links Row */
         .quick-links-box { background-color: #ff6f00; color: white; padding: 10px; font-weight: bold; font-size: 15px; text-align: center; margin-bottom: 15px; border-radius: 4px; }
         .quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 20px; }
         .quick-card { background-color: #fff; border: 1px solid #ccc; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-decoration: none; color: #0056b3; border-radius: 4px; }
+        .quick-card:active { background-color: #e6f2ff; }
+
+        /* Main Sarkari Result 4-Column Grid */
         .sarkari-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+        
         .column-box { background-color: #fff; border: 2px solid #0056b3; border-radius: 4px; min-height: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .column-header { background-color: #0056b3; color: white; text-align: center; padding: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; }
         .column-header.admit { background-color: #28a745; }
         .column-header.result { background-color: #dc3545; }
         .column-header.other { background-color: #6f42c1; }
+        
         .column-box.admit-box { border-color: #28a745; }
         .column-box.result-box { border-color: #dc3545; }
         .column-box.other-box { border-color: #6f42c1; }
+        
         .link-list { list-style: none; padding: 10px; }
-        .link-item { border-bottom: 1px dashed #ccc; padding: 8px 0; font-size: 13px; }
+        .link-item { border-bottom: 1px dashed #ccc; padding: 8px 0; font-size: 13px; line-height: 1.4; }
         .link-item a { text-decoration: none; color: #0056b3; font-weight: bold; }
+        .link-item a:active { color: #ff6f00; }
         .link-item .new-tag { color: red; font-weight: bold; font-size: 11px; margin-left: 5px; animation: blink 1s infinite; }
+        
         @keyframes blink { 0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;} }
+        
+        /* Footer Business Info */
         .business-footer { background-color: #fff; border-top: 2px solid #002e5b; margin-top: 30px; padding: 20px 15px; text-align: center; font-size: 14px; line-height: 1.6; color: #333; }
         .footer-title { color: #002e5b; font-weight: bold; font-size: 16px; margin-bottom: 10px; text-transform: uppercase; }
         .whatsapp-btn { background-color: #25d366; color: white !important; text-decoration: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; display: inline-block; margin: 15px 0; font-size: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .whatsapp-btn:active { background-color: #128c7e; }
+        .contact-details { font-weight: bold; color: #222; margin-top: 10px; }
         .copyright { font-size: 11px; color: #777; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <div class="top-banner">
         <h1>KPBPLB ONLINE HUB</h1>
         <p>पीलीबंगा ई-मित्र & ऑनलाइन फॉर्म डिजिटल हेल्प पोर्टल</p>
     </div>
+
+    <!-- Live Moving Alert -->
     <div class="alert-bar">
-        <marquee scrollamount="4">🔥 <strong>घर बैठे फॉर्म भराने के लिए अभी व्हाट्सएप करें - 8955502010</strong> | लेटेस्ट अपडेट: कॉलेज एडमिशन और BSTC काउंसलिंग पेज चालू हैं।</marquee>
+        <marquee scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+            🔥 <strong>घर बैठे फॉर्म भराने के लिए अभी व्हाट्सएप करें - 8955502010</strong> | हमारे यहाँ राजस्थान, पंजाब, हरियाणा और केंद्र (UPSC) की सभी सरकारी नौकरियों के फॉर्म सही-सही भरे जाते हैं।
+        </marquee>
     </div>
+
     <div class="main-container">
+        
+        <!-- Top Sticky Buttons -->
         <div class="quick-links-box">⭐ IMPORTANT LINKS CORNER ⭐</div>
         <div class="quick-grid">
-            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SSO LOGIN</a>
-            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">JAN SOOCHNA</a>
-            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SHALA DARPAN</a>
-            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">1st GRADE ORDER</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SSO LOGIN (फॉर्म भरें)</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">JAN SOOCHNA STATUS</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SHALA DARPAN LOGIN</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">1st GRADE JOINING LETTER</a>
         </div>
+
+        <!-- The 4 Column Sarkari Result Block -->
         <div class="sarkari-grid">
+            
+            <!-- COLUMN 1: LATEST JOBS (यहाँ अपनी भाषा में नाम सेट हैं) -->
             <div class="column-box">
                 <div class="column-header">Latest Jobs</div>
                 <ul class="link-list">
-                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan New Vacancy Form 2026</a><span class="new-tag">New</span></li>
-                    <li class="link-item"><a href="https://rajteachers.net" target="_blank">All e-Mitra Offline Forms PDF</a></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">राजस्थान की सभी सरकारी नौकरियों के फॉर्म यहाँ भरवाएं</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://punjab.gov.in" target="_blank">पंजाब सरकारी नौकरी के सभी फॉर्म यहाँ से भरें</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://hssc.gov.in" target="_blank">हरियाणा सरकारी नौकरी के सभी फॉर्म लिंक</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://upsc.gov.in" target="_blank">UPSC के सभी फॉर्म (IAS, NDA, CDS भर्ती)</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajteachers.net" target="_blank">ई-मित्र के सभी ऑफलाइन फॉर्म डाउनलोड करें (PDF)</a></li>
                 </ul>
             </div>
+
+            <!-- COLUMN 2: ADMIT CARD -->
             <div class="column-box admit-box">
                 <div class="column-header admit">Admit Card</div>
                 <ul class="link-list">
-                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan Admit Card 2026</a><span class="new-tag">New</span></li>
-                    <li class="link-item"><a href="https://pmkisan.gov.in" target="_blank">PM Kisan Status Corner</a></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">सभी सरकारी परीक्षाओं के एडमिट कार्ड यहाँ से निकालें</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC स्कूल व्याख्याता (1st Grade) एडमिट कार्ड</a></li>
+                    <li class="link-item"><a href="https://pmkisan.gov.in" target="_blank">पीएम किसान योजना का स्टेटस चेक करें</a></li>
                 </ul>
             </div>
+
+            <!-- COLUMN 3: RESULTS -->
             <div class="column-box result-box">
                 <div class="column-header result">Result</div>
                 <ul class="link-list">
-                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC 1st Grade Posting List</a><span class="new-tag">New</span></li>
-                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Pilibanga Local Helpline</a></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">फर्स्ट ग्रेड टीचर फाइनल जॉइनिंग आर्डर सूची</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">टीचर काउंसलिंग स्कूल अलॉटमेंट का रिजल्ट देखें</a></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">पीलीबंगा स्थानीय ई-मित्र सहायता केंद्र</a></li>
                 </ul>
             </div>
-            
-            <!-- यहाँ हमने लिंक्स को आपके नए पेजों से जोड़ दिया है -->
+
+            <!-- COLUMN 4: OTHER SERVICES -->
             <div class="column-box other-box">
                 <div class="column-header other">Other Options</div>
                 <ul class="link-list">
-                    <li class="link-item"><a href="college.html">Govt College 1st Semester Admission List Jari</a><span class="new-tag">New</span></li>
-                    <li class="link-item"><a href="bstc.html">BSTC Counselling Start 2026</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="college.html">सरकारी कॉलेज प्रथम सेमेस्टर एडमिशन लिस्ट जारी</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="bstc.html">बीएसटीसी (BSTC) काउंसलिंग फॉर्म प्रक्रिया शुरू</a><span class="new-tag">New</span></li>
                 </ul>
             </div>
+
         </div>
+
     </div>
+
+    <!-- Customized Business Footer -->
     <div class="business-footer">
         <div class="footer-title">सम्पर्क एवं दुकान का पता</div>
-        <p>📍 करणी चौधरी पुस्तक भंडार, पीलीबंगा</p>
-        <a href="https://wa.me" target="_blank" class="whatsapp-btn">💬 घर बैठे फॉर्म भराने के लिए व्हाट्सएप करें</a>
-        <p>👤 भगीरथ बिर्ट - 8955502020 | 📧 brbirt@gmail.com</p>
-        <div class="copyright">© 2026 KPBPLB ONLINE HUB.</div>
+        
+        <p>📍 <strong>पता:</strong> करणी चौधरी पुस्तक भंडार, पीलीबंगा</p>
+        
+        <a href="https://wa.me" target="_blank" class="whatsapp-btn">
+            💬 घर बैठे फॉर्म भराने के लिए व्हाट्सएप करें
+        </a>
+        
+        <div class="contact-details">
+            <p>👤 <strong>सम्पर्क सूत्र:</strong> भगीरथ बिर्ट - 8955502020</p>
+            <p>📧 <strong>Gmail ID:</strong> brbirt@gmail.com</p>
+        </div>
+        
+        <div class="copyright">
+            © 2026 KPBPLB ONLINE HUB. All Rights Reserved.
+        </div>
     </div>
+
 </body>
 </html>
 
