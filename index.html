@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPBPLB ONLINE HUB | Sarkari Result Style</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+        body { background-color: #f1f8ff; color: #000; }
+        .top-banner { background-color: #002e5b; color: white; text-align: center; padding: 20px 10px; border-bottom: 4px solid #ff6f00; }
+        .top-banner h1 { font-size: 28px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .top-banner p { font-size: 14px; color: #ffca28; margin-top: 6px; font-weight: bold; }
+        .alert-bar { background-color: #fff3cd; color: #856404; padding: 8px; font-size: 14px; font-weight: bold; border-bottom: 1px solid #ffeeba; }
+        .main-container { max-width: 1100px; margin: 15px auto; padding: 0 10px; }
+        .quick-links-box { background-color: #ff6f00; color: white; padding: 10px; font-weight: bold; font-size: 15px; text-align: center; margin-bottom: 15px; border-radius: 4px; }
+        .quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 20px; }
+        .quick-card { background-color: #fff; border: 1px solid #ccc; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-decoration: none; color: #0056b3; border-radius: 4px; }
+        
+        .sarkari-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+        .column-box { background-color: #fff; border: 2px solid #0056b3; border-radius: 4px; min-height: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .column-header { background-color: #0056b3; color: white; text-align: center; padding: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; }
+        .column-header.admit { background-color: #28a745; }
+        .column-header.result { background-color: #dc3545; }
+        .column-header.other { background-color: #6f42c1; }
+        .column-box.admit-box { border-color: #28a745; }
+        .column-box.result-box { border-color: #dc3545; }
+        .column-box.other-box { border-color: #6f42c1; }
+        .link-list { list-style: none; padding: 10px; }
+        .link-item { border-bottom: 1px dashed #ccc; padding: 8px 0; font-size: 13px; }
+        .link-item a { text-decoration: none; color: #0056b3; font-weight: bold; }
+        .link-item .new-tag { color: red; font-weight: bold; font-size: 11px; margin-left: 5px; animation: blink 1s infinite; }
+        
+        /* PREMIUM DESIGNED TAGS FOR LATEST JOBS */
+        .premium-tag { font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-top: 10px; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tag-rj { background-color: #0056b3; color: #ffffff; }
+        .tag-pb { background-color: #6f42c1; color: #ffffff; }
+        .tag-hr { background-color: #28a745; color: #ffffff; }
+        .tag-ssc { background-color: #ff6f00; color: #ffffff; }
+        .tag-upsc { background-color: #dc3545; color: #ffffff; }
+
+        /* BOTTOM PREMIUM ACTION BOXES DISPLAY */
+        .action-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 25px; }
+        .action-box { background-color: #fff; border: 2px solid #ff6f00; border-radius: 6px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .action-box.services { border-color: #002e5b; }
+        .action-box.upcoming { border-color: #e65100; }
+        
+        .action-title { font-size: 16px; font-weight: bold; color: #fff; background-color: #ff6f00; padding: 8px; text-align: center; border-radius: 4px; margin-bottom: 12px; text-transform: uppercase; }
+        .action-box.services .action-title { background-color: #002e5b; }
+        .action-box.upcoming .action-title { background-color: #e65100; }
+        
+        .pdf-btn { display: flex; align-items: center; justify-content: center; background-color: #dc3545; color: white; text-decoration: none; padding: 14px; font-weight: bold; border-radius: 4px; font-size: 14px; border-bottom: 4px solid #b21f2d; text-align: center; margin-top: 5px; }
+        .pdf-btn:active { transform: translateY(2px); border-bottom-width: 2px; }
+        
+        .services-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 5px; }
+        .service-item { background: #f8f9fa; border: 1px solid #ddd; padding: 8px; font-size: 13px; font-weight: bold; border-radius: 3px; color: #333; text-align: center; }
+
+        @keyframes blink { 0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;} }
+        .business-footer { background-color: #fff; border-top: 2px solid #002e5b; margin-top: 30px; padding: 20px 15px; text-align: center; font-size: 14px; line-height: 1.6; color: #333; }
+        .footer-title { color: #002e5b; font-weight: bold; font-size: 16px; margin-bottom: 10px; text-transform: uppercase; }
+        .whatsapp-btn { background-color: #25d366; color: white !important; text-decoration: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; display: inline-block; margin: 15px 0; font-size: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .copyright { font-size: 11px; color: #777; margin-top: 20px; border-top: 1px solid #eee; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        <h1>KPBPLB ONLINE HUB</h1>
+        <p>पीलीबंगा ई-मित्र & ऑनलाइन फॉर्म डिजिटल हेल्प पोर्टल</p>
+    </div>
+    <div class="alert-bar">
+        <marquee scrollamount="4">🔥 <strong>घर बैठे फॉर्म भराने के लिए अभी व्हाट्सएप करें - 8955502010</strong> | लेटेस्ट अपडेट: कॉलेज एडमिशन और बीएसटीसी काउंसलिंग पेज चालू हैं।</marquee>
+    </div>
+    <div class="main-container">
+        <div class="quick-links-box">⭐ IMPORTANT LINKS CORNER ⭐</div>
+        <div class="quick-grid">
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SSO LOGIN</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">JAN SOOCHNA</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">SHALA DARPAN</a>
+            <a href="https://rajasthan.gov.in" target="_blank" class="quick-card">1st GRADE ORDER</a>
+        </div>
+        
+        <div class="sarkari-grid">
+            <!-- 1. LATEST JOBS -->
+            <div class="column-box">
+                <div class="column-header">Latest Jobs</div>
+                <ul class="link-list">
+                    <span class="premium-tag tag-rj">Rajasthan</span>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan New Vacancy Form 2026</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC Online Application Portal Open</a></li>
+                    
+                    <span class="premium-tag tag-pb">Punjab</span>
+                    <li class="link-item"><a href="https://punjab.gov.in" target="_blank">PSSSB Recruitment Form Details</a><span class="new-tag">New</span></li>
+                    
+                    <span class="premium-tag tag-hr">Haryana</span>
+                    <li class="link-item"><a href="https://hssc.gov.in" target="_blank">HSSC various Job Application Link</a></li>
+                    
+                    <span class="premium-tag tag-ssc">SSC</span>
+                    <li class="link-item"><a href="https://ssc.gov.in" target="_blank">SSC GD Constable Online Bharti Form</a><span class="new-tag">New</span></li>
+                    
+                    <span class="premium-tag tag-upsc">UPSC</span>
+                    <li class="link-item"><a href="https://upsc.gov.in" target="_blank">UPSC CDS / NDA Selection Form</a></li>
+                </ul>
+            </div>
+            
+            <!-- 2. ADMIT CARD -->
+            <div class="column-box admit-box">
+                <div class="column-header admit">Admit Card</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Rajasthan General Admit Card 2026</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC 1st Grade Exam Admit Card</a></li>
+                    <li class="link-item"><a href="https://ssc.gov.in" target="_blank">SSC Exams Hall Ticket Link Portal</a></li>
+                </ul>
+            </div>
+            
+            <!-- 3. RESULT -->
+            <div class="column-box result-box">
+                <div class="column-header result">Result</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">RPSC 1st Grade Posting List</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://rajasthan.gov.in" target="_blank">Pilibanga Local Helpline</a></li>
+                </ul>
+            </div>
+            
+            <!-- 4. ALL INDIA NOKARI -->
+            <div class="column-box other-box">
+                <div class="column-header other">All India Nokari</div>
+                <ul class="link-list">
+                    <li class="link-item"><a href="https://ibps.in" target="_blank">Central Bank PO/Clerk Recruitment</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="https://indianrailways.gov.in" target="_blank">Railway NTPC / Group D Vacancy Form</a><span class="new-tag">New</span></li>
+                    <li class="link-item"><a href="college.html">Govt College 1st Semester Admission List</a></li>
+                    <li class="link-item"><a href="bstc.html">BSTC Counselling Portal Link</a></li>
+                </ul>
+            </div>
 
