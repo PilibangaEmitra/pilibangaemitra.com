@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasthan SET 2026 - अल्टीमेट प्रीमियम डिज़ाइन</title>
+    <style>
+        /* लगातार रंग बदलने वाला एनिमेटेड प्रीमियम बैकग्राउंड */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 15px; 
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: kpbGradientBg 15s ease infinite;
+            color: #1a1a1a; 
+            font-weight: bold; 
+            line-height: 1.7;
+        }
+
+        @keyframes kpbGradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* 3D नियॉन शेडो और ग्लास लुक वाला मुख्य बॉक्स */
+        .premium-box { 
+            max-width: 650px; 
+            margin: 30px auto; 
+            background: rgba(255, 255, 255, 0.92); 
+            backdrop-filter: blur(15px); 
+            padding: 30px; 
+            border-radius: 25px; 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 0 30px rgba(231, 60, 126, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* होम बटन */
+        .back-btn { 
+            display: inline-block; 
+            margin-bottom: 25px; 
+            text-decoration: none; 
+            color: #e73c7e; 
+            font-weight: bold; 
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { text-shadow: 0 0 10px #e73c7e; }
+        
+        /* आपकी मुख्य दो लाइनें */
+        .slogan-banner {
+            background: linear-gradient(90deg, #23a6d5, #23d5ab);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(35, 166, 213, 0.3);
+        }
+
+        /* चमकती हुई मॉडर्न हेडिंग */
+        .premium-title {
+            color: #e73c7e;
+            font-size: 21px;
+            margin: 35px 0 15px 0;
+            border-left: 6px solid #e73c7e;
+            padding-left: 12px;
+            text-shadow: 0 0 5px rgba(231, 60, 126, 0.2);
+        }
+
+        /* बिना बाहरी लाइन वाली प्रीमियम लिस्ट-टेबल */
+        .premium-row {
+            display: flex;
+            justify-content: space-between;
+            background: #ffffff;
+            margin-bottom: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-left: 4px solid #23a6d5;
+            transition: 0.3s;
+        }
+        .premium-row:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(35, 166, 213, 0.2);
+        }
+        .row-left { color: #555; width: 40%; }
+        .row-right { color: #1a1a1a; width: 60%; text-align: right; }
+
+        /* स्पेशल अप्लाई लिंक सेक्शन - बिना अंडरलाइन और बोल्ड */
+        .direct-apply-section {
+            background: #ffffff;
+            margin: 25px 0;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 5px solid #e73c7e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+        .direct-apply-section a {
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* परीक्षा पैटर्न के लिए विशेष 3-कॉलम डिज़ाइन */
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            background: #ffffff;
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-left: 4px solid #e73c7e;
+        }
+        .grid-header { background: #f8f9fa; border-radius: 8px; padding: 8px; text-align: center; color: #e73c7e; }
+        .grid-cell { padding: 8px; text-align: center; }
+
+        /* लास्ट डेट का जादुई चमकता हुआ अलर्ट बॉक्स */
+        .alert-magic-box { 
+            background: linear-gradient(90deg, #fff3cd, #ffe3e3); 
+            border: 2px dashed #e73c7e; 
+            padding: 18px; 
+            border-radius: 15px; 
+            text-align: center; 
+            margin: 35px 0; 
+            animation: modernPulseGlow 1.5s infinite alternate; 
+        }
+
+        @keyframes modernPulseGlow {
+            from { box-shadow: 0 0 5px rgba(231, 60, 126, 0.3); }
+            to { box-shadow: 0 0 25px rgba(231, 60, 126, 0.7); background: #fde8e8; }
+        }
+
+        /* व्हाट्सएप और ओनर प्रीमियम शेडो कार्ड */
+        .owner-card-pinnacle { 
+            background: #ffffff; 
+            border: 2px solid #23d5ab; 
+            padding: 25px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(35, 213, 171, 0.15);
+            margin-top: 35px;
+        }
+
+        /* बिना अंडरलाइन वाला नियॉन व्हाट्सएप बटन */
+        .wa-neon-btn {
+            display: block;
+            text-align: center;
+            background: linear-gradient(90deg, #25D366, #1da851);
+            color: white !important;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 18px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+        .wa-neon-btn:hover {
+            box-shadow: 0 5px 30px rgba(37, 211, 102, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="premium-box">
+    <a href="index.html" class="back-btn">⬅️ मुख्य पेज पर वापस जाएं</a>
+
+    <!-- आपकी मुख्य दो लाइनें -->
+    <div class="slogan-banner">
+        <p style="margin: 0 0 6px 0; font-size: 19px;">🎯 आपकी सफलता हमारा लक्ष्य</p>
+        <p style="margin: 0; font-size: 16px;">💼 हम आपको बेहतर सुविधा देंगे</p>
+    </div>
+    
+    <!-- स्टेप 1: परीक्षा विवरण रो-कार्ड्स -->
+    <div class="premium-title">🔹 राजस्थान सेट 2026 परीक्षा विवरण</div>
+    
+    <div class="premium-row"><div class="row-left">परीक्षा का नाम</div><div class="row-right" style="color: #e73c7e;">राजस्थान राज्य पात्रता परीक्षा (राजस्थान सेट 2026)</div></div>
+    <div class="premium-row"><div class="row-left">आयोजन संस्था</div><div class="row-right">कोटा विश्वविद्यालय</div></div>
+    <div class="premium-row"><div class="row-left">अधिसूचना जारी तिथि</div><div class="row-right">12 जून 2026</div></div>
+    <div class="premium-row"><div class="row-left">आवेदन प्रारंभ तिथि</div><div class="row-right">14 जून 2026</div></div>
+    <div class="premium-row"><div class="row-left">आवेदन की अंतिम तिथि</div><div class="row-right" style="color: #dc3545;">15 julho 2026</div></div>
+    <div class="premium-row"><div class="row-left">आवेदन माध्यम</div><div class="row-right">ऑनलाइन</div></div>
+    <div class="premium-row"><div class="row-left">परीक्षा स्तर</div><div class="row-right">राज्य स्तरीय</div></div>
+    <div class="premium-row"><div class="row-left">परीक्षा का उद्देश्य</div><div class="row-right">सहायक प्रोफेसर पद हेतु पात्रता निर्धारण</div></div>
+    <div class="premium-row"><div class="row-left">परीक्षा मोड</div><div class="row-right">ऑफलाइन</div></div>
+    <div class="premium-row"><div class="row-left">प्रश्न प्रकार</div><div class="row-right">बहुविकल्पीय प्रश्न</div></div>
+    <div class="premium-row"><div class="row-left">पात्रता</div><div class="row-right">मान्यता प्राप्त विश्वविद्यालय से स्नातकोत्तर</div></div>
+    <div class="premium-row"><div class="row-left">आधिकारिक वेबसाइट</div><div class="row-right">यूओके की आधिकारिक वेबसाइट</div></div>
+    <div class="premium-row"><div class="row-left">परिणाम</div><div class="row-right">परीक्षा के बाद घोषित किया जाएगा</div></div>
+    <div class="premium-row"><div class="row-left">नौकरी क्षेत्र</div><div class="row-right">विश्वविद्यालय एवं महाविद्यालय शिक्षण सेवा</div></div>
+    <div class="premium-row"><div class="row-left">परीक्षा राज्य</div><div class="row-right">राजस्थान</div></div>
+
+    <!-- नया जोड़ा गया असली SSO लिंक सेक्शन - बिना अंडरलाइन और कड़क बोल्ड -->
+    <div class="direct-apply-section">
+        🔗 apply karne ke liye clic kro: <br><br>
+        <a href="https://sso.rajasthan.gov.in/" target="_blank">https://sso.rajasthan.gov.in/</a>
+    </div>
+
+    <!-- स्टेप 2: आवेदन शुल्क रो-कार्ड्स -->
+    <div class="premium-title">🔹 राजस्थान SET आवेदन शुल्क 2026</div>
+    <div class="premium-row" style="border-left-color: #e73c7e;"><div class="row-left">सामान्य / SBC / OBC (CL) (राजस्थान व अन्य राज्य)</div><div class="row-right" style="color: #23a6d5;">₹1500</div></div>
+    <div class="premium-row" style="border-left-color: #e73c7e;"><div class="row-left">EWS / SBC / OBC (NCL) (राजस्थान राज्य के उम्मीदवार)</div><div class="row-right" style="color: #23a6d5;">₹1200</div></div>
+    <div class="premium-row" style="border-left-color: #e73c7e;"><div class="row-left">SC / ST (राजस्थान राज्य) एवं सभी PwD उम्मीदवार</div><div class="row-right" style="color: #23a6d5;">₹750</div></div>
+
+    <!-- स्टेप 2: परीक्षा पैटर्न आधुनिक ग्रिड -->
+    <div class="premium-title">🔹 राजस्थान SET परीक्षा पैटर्न 2026</div>
+    <div class="pattern-grid" style="background: #f8f9fa;"><div class="grid-header">विवरण</div><div class="grid-header">पेपर I</div><div class="grid-header">पेपर II</div></div>
+    <div class="pattern-grid"><div class="grid-cell" style="color: #555;">उद्देश्य</div><div class="grid-cell">शिक्षण अभिरुचि</div><div class="grid-cell">चुना हुआ विषय</div></div>
+    <div class="pattern-grid"><div class="grid-cell" style="color: #555;">प्रश्नों की संख्या</div><div class="grid-cell" style="color: #e73c7e;">50</div><div class="grid-cell" style="color: #e73c7e;">100</div></div>
 
