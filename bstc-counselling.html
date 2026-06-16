@@ -22,16 +22,32 @@ font-weight:bold;
 }
 
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 background:white;
-margin-top:20px;
 border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
-border:3px solid #ff6f00;
 overflow:hidden;
+border:3px solid #ff6f00;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+margin-top:20px;
 }
 
+/* URGENT BANNER */
+.banner{
+background:linear-gradient(135deg,#ff6f00,#ff3d00);
+color:white;
+text-align:center;
+padding:12px;
+font-weight:bold;
+font-size:15px;
+animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0.6;}
+}
+
+/* CONTENT */
 .content{
 padding:25px;
 text-align:center;
@@ -40,6 +56,7 @@ text-align:center;
 h1{
 color:#d90429;
 font-size:22px;
+margin-bottom:5px;
 }
 
 p{
@@ -47,10 +64,25 @@ color:#003566;
 font-weight:bold;
 }
 
+/* INFO BOX */
+.info{
+background:#f9fbff;
+border:2px solid #0057b7;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+text-align:left;
+}
+
+.info p{
+margin:8px 0;
+}
+
+/* BUTTON */
 .btn{
 display:inline-block;
 margin-top:20px;
-padding:14px 25px;
+padding:12px 25px;
 background:#25d366;
 color:white;
 text-decoration:none;
@@ -59,15 +91,11 @@ font-size:16px;
 font-weight:bold;
 }
 
-.link-box{
-margin-top:25px;
-padding:15px;
-border-top:2px solid #ddd;
-}
-
-.link-box a{
-display:inline-block;
-padding:12px 18px;
+/* LINK */
+.link{
+display:block;
+margin-top:20px;
+padding:12px;
 background:#0057b7;
 color:white;
 text-decoration:none;
@@ -86,29 +114,30 @@ font-weight:bold;
 
 <div class="container">
 
+<div class="banner">
+🎯 आपकी सफलता हमारा लक्ष्य | ⏳ अंतिम तिथि का इंतजार न करें | 💰 फॉर्म फीस सीमित समय तक | अभी आवेदन करें 🎯
+</div>
+
 <div class="content">
 
 <h1>BSTC Admission 2026</h1>
 
-<p>सभी अपडेट और जानकारी केवल एक ही official लिंक पर उपलब्ध है</p>
+<p>KPBPLB ONLINE HUB - पीलीबंगा डिजिटल सेवा केंद्र</p>
 
-<p style="color:red;font-weight:bold;">
-👉 IMPORTANT NOTICE: Only Official BSTC Link
-</p>
+<div class="info">
+<p>📌 ✔ आवेदन प्रक्रिया चालू है</p>
+<p>📌 ✔ अंतिम तिथि जल्द समाप्त हो सकती है</p>
+<p>📌 ✔ फॉर्म फीस सरकारी नियम अनुसार लागू</p>
+<p>📌 ✔ सीट सुरक्षित करने के लिए अभी आवेदन करें</p>
+</div>
 
 <a class="btn" href="https://wa.me/8955502010">
-💬 WhatsApp Support
+💬 WhatsApp Support / Form Help
 </a>
 
-<div class="link-box">
-
-<h3>🔗 OFFICIAL BSTC LINK</h3>
-
-<a href="https://predeledraj2026.com/vcnt.php" target="_blank">
-OPEN BSTC PORTAL
+<a class="link" href="https://predeledraj2026.com/vcnt.php" target="_blank">
+👉 OPEN BSTC OFFICIAL PORTAL
 </a>
-
-</div>
 
 </div>
 
