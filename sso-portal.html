@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSO Portal - पीलीबंगा ई-मित्र</title>
     <style>
-        /* मुख्य डिज़ाइन - सब कुछ बोल्ड */
+        /* मुख्य डिज़ाइन - सब कुछ बोल्ड */
         body { font-family: Arial, sans-serif; margin: 0; padding: 15px; background-color: #f4f7f6; color: #333; font-weight: bold; }
         .main-container { max-width: 600px; margin: 20px auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #007bff; font-weight: bold; font-size: 15px; }
@@ -20,12 +20,11 @@
         .info-title { color: #0056b3; font-size: 18px; margin-top: 0; border-bottom: 2px solid #0056b3; padding-bottom: 6px; font-weight: bold; }
         .info-list { padding-left: 20px; line-height: 1.8; font-size: 15px; list-style-type: square; }
 
-        /* अप्लाई बटन डिज़ाइन - बिना अंडरलाइन और बोल्ड */
-        .apply-section { text-align: center; margin: 25px 0; }
-        .apply-link { display: inline-block; background-color: #007bff; color: white; padding: 12px 35px; text-decoration: none; font-weight: bold; border-radius: 6px; font-size: 16px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
-        .apply-link:hover { background-color: #0056b3; }
+        /* सीधा लिंक स्टाइल - बिना अंडरलाइन */
+        .direct-link-section { text-align: center; margin: 25px 0; font-size: 16px; }
+        .direct-link-section a { color: #0056b3; text-decoration: none; font-size: 18px; }
 
-        /* लास्ट डेट अलर्ट - चमकता हुआ डिज़ाइन */
+        /* लास्ट डेट अलर्ट - चमकता हुआ डिज़ाइन */
         .alert-banner { background-color: #fff3cd; border: 2px dashed #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin: 25px 0; animation: borderBlink 1.5s linear infinite; }
         .alert-text { font-size: 17px; color: #dc3545; font-weight: bold; margin: 0; }
 
@@ -34,7 +33,7 @@
         .whatsapp-button { display: inline-block; background-color: #25D366; color: white; padding: 12px 28px; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 15px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4); font-size: 16px; }
         .owner-details { margin-top: 18px; font-size: 15px; color: #2c3e50; line-height: 1.7; text-align: left; padding-left: 15px; border-top: 1px solid #b8d5ff; padding-top: 12px; font-weight: bold; }
 
-        /* बॉर्डर चमकने का इफ़ेक्ट */
+        /* बॉर्डर चमकने का इफ़ेक्ट */
         @keyframes borderBlink {
             50% { border-color: #dc3545; background-color: #fde8e8; }
         }
@@ -49,10 +48,10 @@
     <!-- 1. आपका मुख्य संदेश -->
     <div class="header-msg-box">
         <p class="target-text">🎯 आपकी सफलता हमारा लक्ष्य</p>
-        <p class="facility-text">💼 हम आपको बेहतर सुविधा देंगे</p>
+        <p class="facility-text">💼 हम आपको Arrays सुविधा देंगे</p>
     </div>
 
-    <!-- 2. पोर्टल की महत्वपूर्ण जानकारी (पूरी बोल्ड और बेहतरीन लाइनें) -->
+    <!-- 2. पोर्टल की महत्वपूर्ण जानकारी -->
     <div class="info-card">
         <h3 class="info-title">💻 Rajasthan SSO Portal (Single Sign On)</h3>
         <ul class="info-list">
@@ -74,11 +73,9 @@
         </ul>
     </div>
 
-    <!-- 4. ऑनलाइन एसएसओ का असली लिंक बटन -->
-    <div class="apply-section">
-        <a href="https://rajasthan.gov.in" target="_blank" class="apply-link">
-            🔗 Open Original SSO Portal (आधिकारिक वेबसाइट)
-        </a>
+    <!-- 4. ऑनलाइन एसएसओ का असली लिंक - सीधा टेक्स्ट लिंक बिना अंडरलाइन -->
+    <div class="direct-link-section">
+        🔗 असली ऑफिशियल लिंक: <a href="https://rajasthan.gov.in" target="_blank">https://rajasthan.gov.in</a>
     </div>
 
     <!-- 5. लास्ट डेट का चमकता हुआ अलर्ट बॉक्स -->
@@ -90,7 +87,7 @@
     <div class="contact-card">
         <h4 style="margin: 0; color: #004085; font-size: 18px; font-weight: bold;">📱 घर बैठे भरोसेमंद तरीके से फॉर्म भरवाने के लिए अभी व्हाट्सएप करें</h4>
         
-        <!-- आपका व्हाट्सएप लिंक आपके सही नंबर के साथ -->
+        <!-- व्हाट्सएप लिंक -->
         <a href="https://wa.me्ते%20भागिरथ%20जी,%20मुझे%20SSO%20पोर्टल%20पर%20फॉर्म%20भरवाना%20है।" target="_blank" class="whatsapp-button">
             💬 WhatsApp पर संपर्क करें
         </a>
