@@ -17,6 +17,67 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+<style>
+/* यह कोड कंप्यूटर के ओरिजिनल साइज को बिना डिलीट किए केवल मोबाइल (700px से छोटी स्क्रीन) का साइज सही करेगा */
+@media(max-width: 700px) {
+  
+  /* हेडर का फालतू गैप और स्पेस कम करने के लिए */
+  .header {
+    padding: 8px 5px !important;
+    gap: 8px !important;
+  }
+
+  /* KPB लोगो का साइज मोबाइल के लिए छोटा करने के लिए */
+  .logo {
+    width: 120px !important;
+    height: auto !important;
+  }
+
+  /* मुख्य नाम का साइज छोटा करने के लिए ताकि अक्षरों के बीच का गैप खत्म हो जाए */
+  .center-content h1 {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    margin: 2px 0 !important;
+  }
+
+  /* सब-हेडिंग (ऑनलाइन फॉर्म | परीक्षा अपडेट) का साइज छोटा करने के लिए */
+  .center-content p {
+    font-size: 13px !important;
+    margin: 2px 0 !important;
+  }
+
+  /* लोकेशन/एड्रेस का गैप कम करने के लिए */
+  .location {
+    font-size: 11px !important;
+    margin-top: 2px !important;
+  }
+
+  /* व्हाट्सएप QR कोड / फोटो का साइज मोबाइल स्क्रीन के हिसाब से छोटा करने के लिए */
+  .owner-photo {
+    width: 110px !important;
+    height: auto !important;
+    border-radius: 6px !important;
+  }
+
+  /* नीचे कॉल और व्हाट्सएप बटन के बीच का स्पेस कम करने के लिए */
+  .contact-box {
+    padding: 5px !important;
+    margin-top: 4px !important;
+  }
+
+  .call-box {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .whatsapp-btn {
+    padding: 6px 14px !important;
+    font-size: 14px !important;
+    border-radius: 5px !important;
+  }
+}
+</style>
+    
 body{
 background:#f4f4f4;
 }
