@@ -318,6 +318,56 @@ width:220px;
 
 </style>
 </head>
+<!-- यह कोड मोबाइल में साइज़ को ऑटोमैटिक एडजस्ट कर देगा -->
+<script>
+function fixMobileResponsiveSize() {
+    // अगर स्क्रीन मोबाइल की है (700px से छोटी)
+    if (window.innerWidth <= 700) {
+        
+        // 1. मुख्य हेडिंग (H1) का साइज़ छोटा करने के लिए
+        var h1Tags = document.getElementsByTagName('h1');
+        for(var i=0; i<h1Tags.length; i++) {
+            h1Tags[i].style.fontSize = '22px';
+            h1Tags[i].style.lineHeight = '1.2';
+            h1Tags[i].style.margin = '4px 0';
+        }
+
+        // 2. सब-हेडिंग (P) का साइज़ छोटा करने के लिए
+        var pTags = document.querySelector('.center-content')?.getElementsByTagName('p');
+        if(pTags) {
+            for(var j=0; j<pTags.length; j++) {
+                pTags[j].style.fontSize = '13px';
+                pTags[j].style.margin = '4px 0';
+            }
+        }
+
+        // 3. KPB लोगो का साइज़ छोटा करने के लिए
+        var logoImg = document.querySelector('.logo');
+        if(logoImg) {
+            logoImg.style.width = '130px';
+            logoImg.style.height = 'auto';
+        }
+
+        // 4. व्हाट्सएप QR कोड / ओनर फोटो का साइज़ छोटा करने के लिए
+        var ownerImg = document.querySelector('.owner-photo');
+        if(ownerImg) {
+            ownerImg.style.width = '120px';
+            ownerImg.style.height = 'auto';
+        }
+
+        // 5. हेडर के बीच का फालतू गैप खत्म करने के लिए
+        var headerDiv = document.querySelector('.header');
+        if(headerDiv) {
+            headerDiv.style.padding = '8px 5px';
+            headerDiv.style.gap = '10px';
+        }
+    }
+}
+
+// वेबसाइट खुलते ही और स्क्रीन बदलते ही यह कोड काम करेगा
+window.addEventListener('load', fixMobileResponsiveSize);
+window.addEventListener('resize', fixMobileResponsiveSize);
+</script>
 
 <body>
 
