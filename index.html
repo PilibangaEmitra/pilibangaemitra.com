@@ -397,49 +397,53 @@ text-decoration:none;">
 
 <ul>
 <style>
-<html><head><style>
-
 .ugc-link{
-    text-decoration:none;
-    color:#0057b7;
-    font-size:20px;
+    display:inline-block;
+    background: linear-gradient(45deg, #ff0000, #ff6600);
+    color:#fff;
+    text-decoration:none; /* underline हटाने के लिए */
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:18px;
     font-weight:bold;
+    box-shadow:0 0 10px #ff3300,
+               0 0 20px #ff6600,
+               0 0 30px #ff9900;
+    animation: glow 1.5s infinite alternate;
+    transition:0.3s;
 }
 
 .ugc-link:hover{
-    color:#d60000;
+    transform:scale(1.08);
 }
 
 .super-new{
-    display:inline-block;
+    background:#ffff00;
+    color:#ff0000;
+    padding:4px 10px;
+    border-radius:20px;
     margin-left:8px;
-    padding:4px 12px;
-    border-radius:25px;
-    background:linear-gradient(90deg,#ff0000,#ff9900,#ffee00,#ff0000);
-    background-size:300% 100%;
-    color:#fff;
-    font-size:10px;
+    font-size:12px;
     font-weight:bold;
-    animation:gradientMove 2s linear infinite,pulse .7s infinite;
-    box-shadow:0 0 8px red;
 }
 
-@keyframes gradientMove{
-0%{background-position:0%;}
-100%{background-position:300%;}
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px #ff3300,
+                   0 0 20px #ff6600;
+    }
+    to{
+        box-shadow:0 0 20px #ff3300,
+                   0 0 40px #ff6600,
+                   0 0 60px #ff9900;
+    }
 }
-
-@keyframes pulse{
-0%,100%{transform:scale(1);}
-50%{transform:scale(1.2);}
-}
-
 </style>
 
-</head><body><a class="ugc-link" href="https://pilibangaemitra.com">
-
-🔥 UGC-NET June 2026
-<span class="super-new">NEW</span>
+<a class="ugc-link" href="ugc-net-admit-card-2026.html">
+    🔥 UGC-NET June 2026
+    <span class="super-new">NEW</span>
+</a>
 
 </a></body></html>
 
