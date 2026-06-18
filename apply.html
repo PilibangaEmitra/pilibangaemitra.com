@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ऑनलाइन फॉर्म आवेदन सेवा - करणी चौधरी पुस्तक भण्डार</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f0f3f6; color: #333; padding: 20px 10px; }
+        
+        /* मुख्य कंटेनर */
+        .main-container { max-width: 650px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-top: 6px solid #c62828; }
+        
+        /* दुकान का हेडर */
+        .shop-header { padding: 25px 15px; text-align: center; background: #fff; border-bottom: 1px solid #eee; }
+        .shop-header h1 { color: #c62828; font-size: 26px; font-weight: bold; }
+        .shop-header p { color: #002e5b; font-size: 15px; font-weight: bold; margin-top: 5px; }
+        
+        /* सुविचार सेक्शन */
+        .suvichar-box { background: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin: 15px; border-radius: 4px; text-align: left; }
+        .suvichar-box h4 { color: #e65100; font-size: 15px; margin-bottom: 5px; font-weight: bold; }
+        .suvichar-box p { font-style: italic; font-size: 14px; color: #5d4037; font-weight: bold; line-height: 1.4; }
+
+        /* हमारी 2-3 बढ़िया लाइनें */
+        .taglines { background: #e8f5e9; border: 1px dashed #2e7d32; padding: 15px; margin: 0 15px 15px 15px; border-radius: 6px; text-align: left; }
+        .taglines li { font-size: 14px; font-weight: bold; color: #1b5e20; margin-bottom: 8px; list-style-type: square; margin-left: 15px; }
+
+        /* गतिशील भर्ती जानकारी बॉक्स */
+        .job-details-box { background: #e3f2fd; border: 1px solid #90caf9; padding: 15px; margin: 0 15px 15px 15px; border-radius: 8px; text-align: left; }
+        .job-details-box h3 { color: #0d47a1; font-size: 18px; margin-bottom: 10px; font-weight: bold; border-bottom: 2px solid #90caf9; padding-bottom: 5px; }
+        .job-details-box p { font-size: 14px; color: #333; line-height: 1.5; font-weight: bold; margin-bottom: 6px; }
+
+        /* बटन कंटेनर */
+        .btn-container { padding: 0 15px 25px 15px; display: flex; flex-direction: column; gap: 12px; }
+        .btn-wa { background: #25D366; color: white; padding: 14px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: block; text-align: center; box-shadow: 0 4px 10px rgba(37,211,102,0.3); transition: 0.2s; }
+        .btn-wa:hover { background: #20ba5a; }
+        .btn-official { background: #0d47a1; color: white; padding: 14px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: block; text-align: center; box-shadow: 0 4px 10px rgba(13,71,161,0.3); }
+        .btn-official:hover { background: #0a3980; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- दुकान की जानकारी -->
+        <div class="shop-header">
+            <h1>करणी चौधरी पुस्तक भण्डार</h1>
+            <p>पीलीबंगा (ऑनलाइन फॉर्म, परीक्षा अपडेट एवं ई-मित्र सेवा)</p>
+        </div>
+
+        <!-- शिक्षा पर सुविचार -->
+        <div class="suvichar-box">
+            <h4>💡 आज का सुविचार (Education Quote):</h4>
+            <p>“शिक्षा सबसे सशक्त हथियार है, जिससे आप पूरी दुनिया को बदल सकते हैं। बिना शिक्षा के इंसान बिना पंखों के पंछी की तरह है।”</p>
+        </div>
+
+        <!-- दुकान की 2-3 बढ़िया लाइनें -->
+        <div class="taglines">
+            <ul>
+                <li>धूप, गर्मी और दुकान की लंबी लाइनों में खड़े रहकर अपना समय बर्बाद न करें।</li>
+                <li>अपने सभी दस्तावेज़ (Documents) हमें व्हाट्सएप पर भेजकर 100% शुद्धता के साथ फॉर्म भरवाएं।</li>
+                <li>फॉर्म भरने के बाद फीस की रसीद (Final Print) तुरंत आपके व्हाट्सएप पर भेज दी जाएगी।</li>
+            </ul>
+        </div>
+
+        <!-- भर्ती की पूरी जानकारी (यह जावास्क्रिप्ट से अपने आप बदलेगी) -->
+        <div class="job-details-box">
+            <h3 id="job-title">भर्ती सामान्य निर्देश</h3>
+            <p id="job-info">📌 इस भर्ती से जुड़ी महत्वपूर्ण तिथियां, आयु सीमा, आवेदन शुल्क और पात्रता की पूरी जांच करने के लिए नीचे दिए गए "ऑफिशियल वेबसाइट" वाले बटन का उपयोग करें। आवेदन करने से पहले विभागीय विज्ञापन अवश्य पढ़ें।</p>
+            <p style="color: #d40000; margin-top: 10px;">⚠️ फॉर्म भरवाने के लिए नीचे दिए गए हरे बटन पर क्लिक करके हमसे व्हाट्सएप पर संपर्क करें।</p>
+        </div>
+
+        <!-- व्हाट्सऐप और ऑफिशियल लिंक बटन्स -->
+        <div class="btn-container">
+            <!-- व्हाट्सऐप नंबर और डायरेक्ट चैट लिंक -->
+            <a href="https://wa.me" target="_blank" class="btn-wa">
+                <i class="fab fa-whatsapp"></i> सीधे व्हाट्सएप पर डॉक्यूमेंट भेजें (8955502010)
+            </a>
+            
+            <!-- असली फॉर्म का लिंक जो ऑटोमैटिक लोड होगा -->
+            <a href="#" id="official-link" target="_blank" class="btn-official">
+                <i class="fas fa-external-link-alt"></i> खुद नोटिस देखने / फॉर्म भरने के लिए यहाँ क्लिक करें
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- जादुई जावास्क्रिप्ट कोड जो नाम और लिंक को ऑटोमैटिक बदलेगा -->
+    <script>
+        var params = new URLSearchParams(window.location.search);
+        
+        // मुख्य लिंक निकालना
+        var targetUrl = params.get('url') || "https://rajasthan.gov.in";
+        document.getElementById('official-link').href = targetUrl;
+        
+        // मुख्य नाम निकालना और बॉक्स की जानकारी बदलना
+        var jobName = params.get('name');
+        if (jobName) {
+            document.getElementById('job-title').textContent = "📌 " + decodeURIComponent(jobName);
+            document.getElementById('job-info').innerHTML = "यह लिंक आपको सीधे <b>" + decodeURIComponent(jobName) + "</b> की आधिकारिक वेबसाइट पर ले जाएगा। घर बैठे इस फॉर्म को सुरक्षित रूप से भरवाने के लिए आप ऊपर दिए गए व्हाट्सएप बटन का उपयोग कर सकते हैं।";
+        }
+    </script>
+</body>
+</html>
 
