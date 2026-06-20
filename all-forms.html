@@ -5,329 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>करणी चौधरी पुस्तक भण्डार पीलीबंगा</title>
     <style>
-        :root {
-            --primary-color: #ff6f00;
-            --secondary-color: #0d47a1;
-            --success-color: #2e7d32;
-            --background-color: #f5f7fa;
-            --text-color: #212121;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 15px;
-        }
-
-        /* Header Style */
-        .header {
-            background: linear-gradient(135deg, #ff8f00, #ff6f00);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-
-        .header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-
-        .header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* Slogan Section */
-        .slogan-box {
-            background-color: white;
-            border-left: 5px solid var(--primary-color);
-            padding: 15px;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-        }
-
-        .slogan-box p {
-            margin: 5px 0;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #424242;
-        }
-
-        /* Section Headings */
-        .section-title {
-            color: var(--secondary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Job Cards */
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #e0e0e0;
-        }
-
-        .job-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: var(--primary-color);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .job-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #1565c0;
-            margin: 0;
-        }
-
-        .posts-count {
-            background-color: #e3f2fd;
-            color: #0d47a1;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .job-details p {
-            margin: 6px 0;
-            font-size: 0.95rem;
-        }
-
-        .job-details strong {
-            color: #555;
-        }
-
-        .last-date {
-            color: #c62828;
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-            padding: 10px 15px;
-            margin-top: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-            transition: background 0.2s;
-        }
-
-        .btn-apply {
-            background-color: #f5f5f5;
-            color: var(--secondary-color);
-            border: 1px solid var(--secondary-color);
-        }
-
-        .btn-apply:hover {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            font-size: 1.2rem;
-            padding: 15px;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #37474f;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-            border-radius: 15px;
-            margin-top: 35px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-        }
-
-        .footer h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
-        }
-
-        .footer p {
-            margin: 5px 0;
-            font-size: 1rem;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 600px) {
-            .header h1 { font-size: 1.8rem; }
-            .job-header { flex-direction: column; align-items: flex-start; gap: 5px; }
-            .posts-count { align-self: flex-start; }
-        }
+        :root { --p: #ff6f00; --s: #0d47a1; --w: #25d366; --bg: #f5f7fa; --d: #1a237e; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 0; }
+        .navbar { background: var(--d); padding: 12px 20px; position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .navbar a { color: white; text-decoration: none; font-weight: bold; padding: 6px 12px; border-radius: 4px; }
+        .navbar a.active { background: var(--p); }
+        .ticker { background: #d32f2f; color: white; padding: 8px; font-weight: bold; text-align: center; }
+        .container { max-width: 750px; margin: 20px auto; padding: 0 15px; }
+        .header { background: linear-gradient(135deg, #ff8f00, #ff6f00); color: white; text-align: center; padding: 25px; border-radius: 12px; }
+        .slogan { background: white; border-left: 5px solid var(--p); padding: 15px; border-radius: 4px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .btn-wa { display: block; background: var(--w); color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 20px 0; }
+        .title { color: var(--s); border-bottom: 2px solid var(--s); padding-bottom: 4px; margin-top: 30px; }
+        .card { background: white; padding: 18px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #ddd; position: relative; }
+        .card:hover { border-color: var(--p); }
+        .card-h { display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: #1565c0; }
+        .badge { background: #e3f2fd; color: #0d47a1; padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; }
+        .last-date { color: #c62828; font-weight: bold; }
+        .btn-link { display: inline-block; width: 100%; text-align: center; padding: 10px; margin-top: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; background: #f5f5f5; color: var(--s); border: 1px solid var(--s); box-sizing: border-box; }
+        .btn-link:hover { background: var(--s); color: white; }
+        .footer { background: #37474f; color: white; text-align: center; padding: 20px; border-radius: 12px; margin-top: 30px; }
     </style>
 </head>
 <body>
 
-<div class="container">
+<nav class="navbar">
+    <a href="https://blogspot.com" class="brand">🏠 करणी चौधरी पुस्तक भण्डार</a>
+    <div class="nav-links">
+        <a href="https://blogspot.com" class="active">होम पेज (Home)</a>
+        <a href="https://wa.me" target="_blank" style="background:var(--w);">WhatsApp संपर्क</a>
+    </div>
+</nav>
 
-    <!-- Header Section -->
+<div class="ticker">
+    📢 REET भर्ती जल्द! | BSTC काउंसलिंग शुरू! | CET परीक्षा तिथियां जारी! | घर बैठे फॉर्म के लिए WhatsApp करें।
+</div>
+
+<div class="container">
     <div class="header">
         <h1>करणी चौधरी पुस्तक भण्डार पीलीबंगा</h1>
         <p>🎯 आपकी सफलता, हमारा लक्ष्य 🎯</p>
     </div>
 
-    <!-- Slogan Box (Option 2 Added) -->
-    <div class="slogan-box">
-        <p>✨ समय भी बचेगा, सरकारी नौकरी का सपना भी सच होगा!</p>
+    <div class="slogan">
+        <p>✨ <b>समय भी बचेगा, सरकारी नौकरी का सपना भी सच होगा!</b></p>
         <p>✨ करणी चौधरी पुस्तक भण्डार पीलीबंगा — जहाँ मिलती है 100% सही और सुरक्षित फॉर्म भरने की सुविधा।</p>
-        <p>✨ अभी अपने दस्तावेज़ WhatsApp करें और निश्चिंत हो जाएं!</p>
+        <p>✨ गलत फॉर्म भरने की चिंता छोड़ें, क्योंकि यहाँ हर फॉर्म एक्सपर्ट की देखरेख में भरा जाता है! ✍️</p>
+        <p>✨ आपका भरोसा ही हमारी असली पहचान है। अभी अपने दस्तावेज़ WhatsApp करें और निश्चिंत हो जाएं! 🤝</p>
     </div>
 
-    <!-- Big WhatsApp Button -->
-    <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
-        💬 घर बैठे फॉर्म भरवाने के लिए WhatsApp करें
-    </a>
+    <a href="https://wa.me" class="btn-wa" target="_blank">💬 घर बैठे फॉर्म भरवाने के लिए यहाँ WhatsApp करें</a>
 
-    <!-- SSC Section -->
-    <div class="section-title">🏛️ SSC भर्ती फॉर्म 2026</div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">SSC Group B & Group C</h3>
-            <span class="posts-count">12,256 पद</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> स्नातक (Any Graduate / Bachelors Degree / MBA / PGDM)</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">22-06-2026</span></p>
-        </div>
-        <a href="https://ssc.gov.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">SSC SA / UDC</h3>
-            <span class="posts-count">227 पद</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> स्नातक (Any Bachelors Degree)</p>
-            <p><strong>एडवांस नंबर:</strong> 4/1/2026-CONF-5</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">26-06-2026</span></p>
-        </div>
-        <a href="https://ssc.gov.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">SSC JSA / LDC</h3>
-            <span class="posts-count">149 पद</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> 12वीं पास (12th)</p>
-            <p><strong>एडवांस नंबर:</strong> 4/4/2026-CONF-5</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">26-06-2026</span></p>
-        </div>
-        <a href="https://ssc.gov.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-
-    <!-- All India Jobs Section -->
-    <div class="section-title">🇮🇳 All India के प्रमुख फॉर्म</div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">Indian Navy (10+2 B.Tech Cadet Entry Scheme)</h3>
-            <span class="posts-count">60 पद</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> 12वीं पास (12th)</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">29-06-2026</span></p>
-        </div>
-        <a href="https://joinindiannavy.gov.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">SBI (Specialist Cadre Officer)</h3>
-            <span class="posts-count">5 पद</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> स्नातक (Any Graduate)</p>
-            <p><strong>विज्ञापन संख्या:</strong> CRPD/SCO/2026-27/10</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">08-07-2026</span></p>
-        </div>
-        <a href="https://sbi.bank.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">HSSC Group D</h3>
-            <span class="posts-count">बम्पर भर्ती</span>
-        </div>
-        <div class="job-details">
-            <p><strong>योग्यता:</strong> 10वीं पास (10th)</p>
-            <p><strong>विज्ञापन संख्या:</strong> 05/2026</p>
-            <p><strong>अंतिम तिथि:</strong> <span class="last-date">03-07-2026</span></p>
-        </div>
-        <a href="https://hssc.gov.in" class="btn btn-apply" target="_blank">🔗 ऑनलाइन आवेदन करें</a>
-    </div>
-
-    <div class="job-card">
-        <div class="job-header">
-            <h3 class="job-title">IAF (Agniveervayu & Airmen Group Y)</h3>
-            <span class="posts-count">विभिन्न पद</span>
-        </div>
-        <div class="job-details">
-<div class="job-card">
-    <div class="job-header">
-        <h3 class="job-title">IAF (Agniveervayu & Airmen Group Y)</h3>
-        <span class="posts-count">विभिन्न पद</span>
-    </div>
-    <div class="job-details">
-        <p><strong>योग्यता:</strong> B.Pharma, B.Sc, Diploma, 12th</p>
-        <p><strong>अंतिम तिथि:</strong> <span class="last-date">26-07-2026</span></p>
-    </div>
-    <a href="https://edcil.co.in" class="btn btn-apply" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    <div class="title"><h3>🏛️ SSC भर्ती फॉर्म 2026</h3></div>
     
-    <!-- यहाँ नया होम बटन जोड़ा गया है -->
-    <a href="#main-home" class="btn" style="background-color: #37474f; color: white; margin-top: 8px;">🏠 मुख्य होम पेज पर जाएँ</a>
+    <div class="card">
+        <div class="card-h"><div>SSC Group B & Group C</div><span class="badge">12,256 पद</span></div>
+        <p>योग्यता: Any Graduate, Any Bachelors Degree, MBA/PGDM</p>
+        <p>अंतिम तिथि: <span class="last-date">22-06-2026</span></p>
+        <a href="https://ssc.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>SSC SA / UDC</div><span class="badge">227 पद</span></div>
+        <p>योग्यता: Any Bachelors Degree | विज्ञापन: 4/1/2026-CONF-5</p>
+        <p>अंतिम तिथि: <span class="last-date">26-06-2026</span></p>
+        <a href="https://ssc.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>SSC JSA / LDC</div><span class="badge">149 पद</span></div>
+        <p>योग्यता: 12TH Pass | विज्ञापन: 4/4/2026-CONF-5</p>
+        <p>अंतिम तिथि: <span class="last-date">26-06-2026</span></p>
+        <a href="https://ssc.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="title"><h3>🇮🇳 All India के प्रमुख फॉर्म</h3></div>
+
+    <div class="card">
+        <div class="card-h"><div>Indian Navy (10+2 B.Tech Cadet Entry)</div><span class="badge">60 पद</span></div>
+        <p>योग्यता: 12TH Pass</p>
+        <p>अंतिम तिथि: <span class="last-date">29-06-2026</span></p>
+        <a href="https://joinindiannavy.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>SBI (Specialist Cadre Officer)</div><span class="badge">5 पद</span></div>
+        <p>योग्यता: Any Graduate | विज्ञापन: CRPD/SCO/2026-27/10</p>
+        <p>अंतिम तिथि: <span class="last-date">08-07-2026</span></p>
+        <a href="https://sbi.bank.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>HSSC Group D</div><span class="badge">बम्पर भर्ती</span></div>
+        <p>योग्यता: 10TH Pass | विज्ञापन: 05/2026</p>
+        <p>अंतिम तिथि: <span class="last-date">03-07-2026</span></p>
+        <a href="https://hssc.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>IAF (Agniveervayu & Airmen Group Y)</div><span class="badge">विभिन्न पद</span></div>
+        <p>योग्यता: B.Pharma, B.Sc, Diploma, 12TH</p>
+        <p>अंतिम तिथि: <span class="last-date">26-07-2026</span></p>
+        <a href="https://edcil.co.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+        <a href="https://blogspot.com" class="btn-link" style="background:#37474f; color:white;">🏠 मुख्य होम पेज पर जाएँ</a>
+    </div>
+
+    <div class="card">
+        <div class="card-h"><div>SSB Constable (GD)</div><span class="badge">50 पद</span></div>
+        <p>योग्यता: 10TH Pass | विज्ञापन: 600/RC/SSB/Remust.CT(GD)-2026</p>
+        <p>अंतिम तिथि: <span class="last-date">20-06-2026</span></p>
+        <a href="https://ssb.gov.in" class="btn-link" target="_blank">🔗 अभी अप्लाई करने के लिए यहाँ क्लिक करें</a>
+    </div>
+
+    <div class="footer">
+        <h3>📍 करणी चौधरी पुस्तक भण्डार पीलीबंगा</h3>
+        <p><b>प्रोप्राइटर:</b> भागीरथ बिरट | 📞 8955502010</p>
+    </div>
 </div>
 
+</body>
+</html>
